@@ -3,7 +3,7 @@
 
 [![NPM](https://nodei.co/npm/npm-check-updates.png?downloads=true)](https://www.npmjs.com/package/npm-check-updates)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-npm-check-updates/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-npm_check_updates_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-npm-check-updates/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-npm-check-updates/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-npm-check-updates_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-npm-check-updates/build..beta..travis-ci.org/apidoc.html)
 
 ![package-listing](https://npmdoc.github.io/node-npmdoc-npm-check-updates/build/screen-capture.npmPackageListing.svg)
 
