@@ -1,0 +1,18 @@
+<svg height="238" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="238" fill="#555" width="720"></rect>
+<text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
+<tspan x="10" y="26">  0.  2017-04-07 18:50:48 +0000    64365 bytes  .</tspan>
+<tspan x="10" y="42">  1.  2017-04-07 18:50:48 +0000      555 bytes  LICENSE</tspan>
+<tspan x="10" y="58">  2.  2017-04-07 18:50:48 +0000     8205 bytes  README.md</tspan>
+<tspan x="10" y="74">  3.  2017-04-07 18:50:48 +0000     3072 bytes  bin/ncu</tspan>
+<tspan x="10" y="90">  4.  2017-04-07 18:50:48 +0000       61 bytes  bin/npm-check-updates</tspan>
+<tspan x="10" y="106">  5.  2017-04-07 18:50:48 +0000    15655 bytes  lib/npm-check-updates.js</tspan>
+<tspan x="10" y="122">  6.  2017-04-07 18:50:48 +0000      802 bytes  lib/package-managers/README.md</tspan>
+<tspan x="10" y="138">  7.  2017-04-07 18:50:48 +0000     2956 bytes  lib/package-managers/bower.js</tspan>
+<tspan x="10" y="154">  8.  2017-04-07 18:50:48 +0000     4466 bytes  lib/package-managers/npm.js</tspan>
+<tspan x="10" y="170">  9.  2017-04-07 18:50:48 +0000      823 bytes  lib/raw-promisify.js</tspan>
+<tspan x="10" y="186"> 10.  2017-04-07 18:50:48 +0000     6359 bytes  lib/version-util.js</tspan>
+<tspan x="10" y="202"> 11.  2017-04-07 18:50:48 +0000    17517 bytes  lib/versionmanager.js</tspan>
+<tspan x="10" y="218"> 12.  2017-04-07 18:50:48 +0000     3894 bytes  package.json</tspan>
+</text>
+</svg>
