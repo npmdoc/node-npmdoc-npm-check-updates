@@ -51,7 +51,7 @@
 
         href="https://github.com/tjunnone/npm-check-updates"
 
-    >npm-check-updates (v2.10.4)</a>
+    >npm-check-updates (v2.10.5)</a>
 </h1>
 <h4>Find newer versions of dependencies than what your package.json or bower.json allows</h4>
 <div class="apidocSectionDiv"><a
@@ -781,11 +781,11 @@ https://github.com/tjunnone/npm-check-updates.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function run(opts) {
-    options = opts || {};
+    var options = opts || {};
 
     // if not executed on the command-line (i.e. executed as a node module), set some defaults
     if (!options.cli) {
-        _.defaults(options, {
+        options = _.defaults({}, options, {
             // if they want to modify the package file, we must disable jsonUpgraded
             // otherwise the write operation will not happen
             jsonUpgraded: !options.upgrade,
@@ -800,7 +800,7 @@ https://github.com/tjunnone/npm-check-updates.&#x27;);
     // get filter from arguments
     options.filter = options.args.join(&#x27; &#x27;) || options.filter;
 
-    print(&#x27;Initializing...&#x27;, &#x27;verbose&#x27;);
+    print(options, &#x27;Initializing...&#x27;, &#x27;verbose&#x27;);
 
     return vm.initialize({
         global: options.global,
@@ -812,8 +812,8 @@ https://github.com/tjunnone/npm-check-updates.&#x27;);
         options = initOptions(options);
 
         return options.global ?
-            analyzeGlobalPackages() :
-            findPackage().spread(analyzeProjectDependencies);
+            analyzeGlobalPackages(options) :
+            findPackage(options).spread(_.partial(analyzeProjectDependencies, options));
     });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
