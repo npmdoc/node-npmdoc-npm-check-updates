@@ -350,7 +350,7 @@
 <tspan x="10" y="5562">  │ │ ├─┬ form-data@2.1.2 </tspan>
 <tspan x="10" y="5578">  │ │ │ └── asynckit@0.4.0 </tspan>
 <tspan x="10" y="5594">  │ │ ├─┬ har-validator@4.2.1 </tspan>
-<tspan x="10" y="5610">  │ │ │ ├─┬ ajv@4.11.5 </tspan>
+<tspan x="10" y="5610">  │ │ │ ├─┬ ajv@4.11.6 </tspan>
 <tspan x="10" y="5626">  │ │ │ │ ├── co@4.6.0 </tspan>
 <tspan x="10" y="5642">  │ │ │ │ └─┬ json-stable-stringify@1.0.1 </tspan>
 <tspan x="10" y="5658">  │ │ │ │   └── jsonify@0.0.0 </tspan>
@@ -539,7 +539,7 @@
 <tspan x="10" y="8586">    │   │ ├── timed-out@3.1.3 </tspan>
 <tspan x="10" y="8602">    │   │ ├── unzip-response@1.0.2 </tspan>
 <tspan x="10" y="8618">    │   │ └── url-parse-lax@1.0.0 </tspan>
-<tspan x="10" y="8634">    │   ├─┬ registry-auth-token@3.1.1 </tspan>
+<tspan x="10" y="8634">    │   ├─┬ registry-auth-token@3.1.2 </tspan>
 <tspan x="10" y="8650">    │   │ └─┬ rc@1.2.1 </tspan>
 <tspan x="10" y="8666">    │   │   ├── deep-extend@0.4.1 </tspan>
 <tspan x="10" y="8682">    │   │   ├── minimist@1.2.0 </tspan>
