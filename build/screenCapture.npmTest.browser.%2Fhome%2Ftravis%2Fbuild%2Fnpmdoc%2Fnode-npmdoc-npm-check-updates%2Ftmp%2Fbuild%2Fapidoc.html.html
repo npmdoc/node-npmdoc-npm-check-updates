@@ -1,0 +1,1844 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/tjunnone/npm-check-updates">npm-check-updates (v2.10.5)</a>
+</h1>
+<h4>Find newer versions of dependencies than what your package.json or bower.json allows</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-check-updates">module npm-check-updates</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.getCurrentDependencies">
+            function <span class="apidocSignatureSpan">npm-check-updates.</span>getCurrentDependencies
+            <span class="apidocSignatureSpan">(pkgData, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.getGreatestPackageVersion">
+            function <span class="apidocSignatureSpan">npm-check-updates.</span>getGreatestPackageVersion
+            <span class="apidocSignatureSpan">(pkgData)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.getInstalledPackages">
+            function <span class="apidocSignatureSpan">npm-check-updates.</span>getInstalledPackages
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.getLatestPackageVersion">
+            function <span class="apidocSignatureSpan">npm-check-updates.</span>getLatestPackageVersion
+            <span class="apidocSignatureSpan">(pkgData)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.getPreferredWildcard">
+            function <span class="apidocSignatureSpan">npm-check-updates.</span>getPreferredWildcard
+            <span class="apidocSignatureSpan">(dependencies)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.getVersionTarget">
+            function <span class="apidocSignatureSpan">npm-check-updates.</span>getVersionTarget
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.initialize">
+            function <span class="apidocSignatureSpan">npm-check-updates.</span>initialize
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.isSatisfied">
+            function <span class="apidocSignatureSpan">npm-check-updates.</span>isSatisfied
+            <span class="apidocSignatureSpan">(version, range, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.isUpgradeable">
+            function <span class="apidocSignatureSpan">npm-check-updates.</span>isUpgradeable
+            <span class="apidocSignatureSpan">(current, latest)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.queryVersions">
+            function <span class="apidocSignatureSpan">npm-check-updates.</span>queryVersions
+            <span class="apidocSignatureSpan">(packageMap, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.run">
+            function <span class="apidocSignatureSpan">npm-check-updates.</span>run
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.upgradeDependencies">
+            function <span class="apidocSignatureSpan">npm-check-updates.</span>upgradeDependencies
+            <span class="apidocSignatureSpan">(currentDependencies, latestVersions, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.upgradeDependencyDeclaration">
+            function <span class="apidocSignatureSpan">npm-check-updates.</span>upgradeDependencyDeclaration
+            <span class="apidocSignatureSpan">(declaration, latestVersion, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.upgradePackageData">
+            function <span class="apidocSignatureSpan">npm-check-updates.</span>upgradePackageData
+            <span class="apidocSignatureSpan">(pkgData, oldDependencies, newDependencies, newVersions, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.upgradePackageDefinitions">
+            function <span class="apidocSignatureSpan">npm-check-updates.</span>upgradePackageDefinitions
+            <span class="apidocSignatureSpan">(currentDependencies, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-check-updates.</span>version_util</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-check-updates.</span>versionmanager</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-check-updates.version_util">module npm-check-updates.version_util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.version_util.addWildCard">
+            function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>addWildCard
+            <span class="apidocSignatureSpan">(version, wildcard)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.version_util.colorizeDiff">
+            function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>colorizeDiff
+            <span class="apidocSignatureSpan">(strToColor, strToCompare, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.version_util.findGreatestByLevel">
+            function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>findGreatestByLevel
+            <span class="apidocSignatureSpan">(versions, current, level)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.version_util.getPrecision">
+            function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>getPrecision
+            <span class="apidocSignatureSpan">(version)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.version_util.isWildCard">
+            function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>isWildCard
+            <span class="apidocSignatureSpan">(version)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.version_util.isWildPart">
+            function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>isWildPart
+            <span class="apidocSignatureSpan">(versionPart)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.version_util.numParts">
+            function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>numParts
+            <span class="apidocSignatureSpan">(version)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.version_util.precisionAdd">
+            function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>precisionAdd
+            <span class="apidocSignatureSpan">(precision, n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.version_util.setPrecision">
+            function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>setPrecision
+            <span class="apidocSignatureSpan">(version, precision)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.version_util.stringify">
+            function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>stringify
+            <span class="apidocSignatureSpan">(semver, precision)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>VERSION_ADDED_PARTS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>VERSION_BASE_PARTS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>VERSION_PARTS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>WILDCARDS</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.npm-check-updates.versionmanager">module npm-check-updates.versionmanager</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.versionmanager.getCurrentDependencies">
+            function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>getCurrentDependencies
+            <span class="apidocSignatureSpan">(pkgData, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.versionmanager.getGreatestPackageVersion">
+            function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>getGreatestPackageVersion
+            <span class="apidocSignatureSpan">(pkgData)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.versionmanager.getInstalledPackages">
+            function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>getInstalledPackages
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.versionmanager.getLatestPackageVersion">
+            function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>getLatestPackageVersion
+            <span class="apidocSignatureSpan">(pkgData)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.versionmanager.getPreferredWildcard">
+            function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>getPreferredWildcard
+            <span class="apidocSignatureSpan">(dependencies)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.versionmanager.getVersionTarget">
+            function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>getVersionTarget
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.versionmanager.initialize">
+            function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>initialize
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.versionmanager.isSatisfied">
+            function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>isSatisfied
+            <span class="apidocSignatureSpan">(version, range, loose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.versionmanager.isUpgradeable">
+            function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>isUpgradeable
+            <span class="apidocSignatureSpan">(current, latest)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.versionmanager.queryVersions">
+            function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>queryVersions
+            <span class="apidocSignatureSpan">(packageMap, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.versionmanager.upgradeDependencies">
+            function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>upgradeDependencies
+            <span class="apidocSignatureSpan">(currentDependencies, latestVersions, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.versionmanager.upgradeDependencyDeclaration">
+            function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>upgradeDependencyDeclaration
+            <span class="apidocSignatureSpan">(declaration, latestVersion, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.versionmanager.upgradePackageData">
+            function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>upgradePackageData
+            <span class="apidocSignatureSpan">(pkgData, oldDependencies, newDependencies, newVersions, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.npm-check-updates.versionmanager.upgradePackageDefinitions">
+            function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>upgradePackageDefinitions
+            <span class="apidocSignatureSpan">(currentDependencies, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-check-updates" id="apidoc.module.npm-check-updates">module npm-check-updates</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.getCurrentDependencies" id="apidoc.element.npm-check-updates.getCurrentDependencies">
+        function <span class="apidocSignatureSpan">npm-check-updates.</span>getCurrentDependencies
+        <span class="apidocSignatureSpan">(pkgData, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCurrentDependencies(pkgData, options) {
+
+    pkgData = pkgData || {};
+    options = options || {};
+
+    if (!options.prod &amp;&amp; !options.dev &amp;&amp; !options.optional) {
+        options.prod = options.dev = options.optional = true;
+    }
+
+    var allDependencies = cint.filterObject(_.merge({},
+        options.prod &amp;&amp; pkgData.dependencies,
+        options.dev &amp;&amp; pkgData.devDependencies,
+        options.optional &amp;&amp; pkgData.optionalDependencies
+    ), filterAndReject(options.filter, options.reject));
+
+    return allDependencies;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.getGreatestPackageVersion" id="apidoc.element.npm-check-updates.getGreatestPackageVersion">
+        function <span class="apidocSignatureSpan">npm-check-updates.</span>getGreatestPackageVersion
+        <span class="apidocSignatureSpan">(pkgData)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getGreatestPackageVersion = function (pkgData) {
+    return selectedPackageManager.greatest(pkgData);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.getInstalledPackages" id="apidoc.element.npm-check-updates.getInstalledPackages">
+        function <span class="apidocSignatureSpan">npm-check-updates.</span>getInstalledPackages
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getInstalledPackages(options) {
+
+    options = options || {};
+
+    return selectedPackageManager.list([], {cwd: options.cwd}).then(function (results) {
+        if (!results || !results.dependencies) {
+            throw new Error('Unable to retrieve NPM package list');
+        }
+
+        // filter out undefined packages or those with a wildcard
+        var filterFunction = filterAndReject(options.filter, options.reject);
+        var validPackages = cint.filterObject(results.dependencies, function (dep, pkgInfo) {
+            return pkgInfo &amp;&amp; pkgInfo.name &amp;&amp; pkgInfo.version &amp;&amp; !versionUtil.isWildPart(pkgInfo.version) &amp;&amp; filterFunction(dep);
+        });
+
+        // convert the dependency object from npm into a simple object that maps the package name to its version
+        var simpleDependencies = cint.mapObject(validPackages, function (dep, pkgInfo) {
+            return cint.keyValue(dep, pkgInfo.version);
+        });
+
+        return simpleDependencies;
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.getLatestPackageVersion" id="apidoc.element.npm-check-updates.getLatestPackageVersion">
+        function <span class="apidocSignatureSpan">npm-check-updates.</span>getLatestPackageVersion
+        <span class="apidocSignatureSpan">(pkgData)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLatestPackageVersion = function (pkgData) {
+    return selectedPackageManager.latest(pkgData);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.getPreferredWildcard" id="apidoc.element.npm-check-updates.getPreferredWildcard">
+        function <span class="apidocSignatureSpan">npm-check-updates.</span>getPreferredWildcard
+        <span class="apidocSignatureSpan">(dependencies)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPreferredWildcard(dependencies) {
+
+    // if there are no dependencies, return null.
+    if (Object.keys(dependencies).length === 0) {
+        return null;
+    }
+
+    // group the dependencies by wildcard
+    var groups = _.groupBy(_.values(dependencies), function (dep) {
+        return _.find(versionUtil.WILDCARDS, function (wildcard) {
+            return dep &amp;&amp; dep.indexOf(wildcard) &gt; -1;
+        });
+    });
+
+    // if none of the dependencies use a wildcard, return null
+    var usedWildcards = Object.keys(groups);
+    if (usedWildcards.length === 1 &amp;&amp; usedWildcards[0] === 'undefined') {
+        return null;
+    }
+
+    // convert to an array of objects that can be sorted
+    var arrOfGroups = cint.toArray(groups, function (wildcard, instances) {
+        return {
+            wildcard: wildcard,
+            instances: instances
+        };
+    });
+
+    // reverse sort the groups so that the wildcard with the most appearances is at the head, then return it.
+    var sorted = _.sortBy(arrOfGroups, function (wildcardObject) {
+        return -wildcardObject.instances.length;
+    });
+
+    return sorted[0].wildcard;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.getVersionTarget" id="apidoc.element.npm-check-updates.getVersionTarget">
+        function <span class="apidocSignatureSpan">npm-check-updates.</span>getVersionTarget
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getVersionTarget(options) {
+    return options.semverLevel ? options.semverLevel :
+        options.newest ? 'newest' :
+        options.greatest ? 'greatest' :
+        'latest';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.initialize" id="apidoc.element.npm-check-updates.initialize">
+        function <span class="apidocSignatureSpan">npm-check-updates.</span>initialize
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initialize(args) {
+
+    args = args || {};
+    args.packageManager = args.packageManager || 'npm';
+
+    if (!(args.packageManager in packageManagers)) {
+        throw new Error('Invalid package manager: ' + args.packageManager);
+    }
+
+    selectedPackageManager = packageManagers[args.packageManager];
+
+    return selectedPackageManager.init({
+        global: args.global,
+        registry: args.registry
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.isSatisfied" id="apidoc.element.npm-check-updates.isSatisfied">
+        function <span class="apidocSignatureSpan">npm-check-updates.</span>isSatisfied
+        <span class="apidocSignatureSpan">(version, range, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function satisfies(version, range, loose) {
+  try {
+    range = new Range(range, loose);
+  } catch (er) {
+    return false;
+  }
+  return range.test(version);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.isUpgradeable" id="apidoc.element.npm-check-updates.isUpgradeable">
+        function <span class="apidocSignatureSpan">npm-check-updates.</span>isUpgradeable
+        <span class="apidocSignatureSpan">(current, latest)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isUpgradeable(current, latest) {
+
+    // do not upgrade non-npm version declarations (such as git tags)
+    // do not upgrade versionUtil.wildcards
+    if (!semver.validRange(current) || versionUtil.isWildCard(current)) {
+        return false;
+    }
+
+    // remove the constraint (e.g. ^1.0.1 -&gt; 1.0.1) to allow upgrades that satisfy the range, but are out of date
+    var range = semverutils.parseRange(current)[0];
+    if (!range) {
+        throw new Error('"' + current + '" could not be parsed by semver-utils. This is probably a bug. Please file an issue at
+https://github.com/tjunnone/npm-check-updates.');
+    }
+    var version = versionUtil.stringify(range);
+
+    // make sure it is a valid range
+    // not upgradeable if the latest version satisfies the current range
+    // not upgradeable if the specified version is newer than the latest (indicating a prerelease version)
+    return Boolean(semver.validRange(version)) &amp;&amp;
+        !isSatisfied(latest, version) &amp;&amp;
+        !semver.ltr(latest, version);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.queryVersions" id="apidoc.element.npm-check-updates.queryVersions">
+        function <span class="apidocSignatureSpan">npm-check-updates.</span>queryVersions
+        <span class="apidocSignatureSpan">(packageMap, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function queryVersions(packageMap, options) {
+
+    var getPackageVersion;
+    options = options || {};
+
+    var packageList = Object.keys(packageMap);
+
+    // validate options.versionTarget
+    options.versionTarget = options.versionTarget || 'latest';
+
+    // determine the getPackageVersion function from options.versionTarget
+    switch (options.versionTarget) {
+        case 'latest':
+            getPackageVersion = selectedPackageManager.latest;
+            break;
+        case 'greatest':
+            getPackageVersion = selectedPackageManager.greatest;
+            break;
+        case 'newest':
+            getPackageVersion = selectedPackageManager.newest;
+            break;
+        case 'major':
+            getPackageVersion = selectedPackageManager.greatestMajor;
+            break;
+        case 'minor':
+            getPackageVersion = selectedPackageManager.greatestMinor;
+            break;
+        default:
+            var supportedVersionTargets = ['latest', 'newest', 'greatest', 'major', 'minor'];
+            return Promise.reject(new Error('Unsupported versionTarget: ' + options.versionTarget +
+                '. Supported version targets are: ' + supportedVersionTargets.join(', ')));
+    }
+
+    // ignore 404 errors from getPackageVersion by having them return null instead of rejecting
+    function getPackageVersionProtected(dep) {
+        return getPackageVersion(dep, packageMap[dep]).catch(function (err) {
+            if (err.message == 404) { // eslint-disable-line eqeqeq
+                return null;
+            } else {
+                throw err;
+            }
+        });
+    }
+
+    // zip up the array of versions into to a nicer object keyed by package name
+    function zipVersions(versionList) {
+        return cint.toObject(versionList, function (version, i) {
+            return cint.keyValue(packageList[i], version);
+        });
+    }
+
+    return Promise.map(packageList, getPackageVersionProtected)
+        .then(zipVersions)
+        .then(_.partialRight(_.pickBy, _.identity));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.run" id="apidoc.element.npm-check-updates.run">
+        function <span class="apidocSignatureSpan">npm-check-updates.</span>run
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function run(opts) {
+    var options = opts || {};
+
+    // if not executed on the command-line (i.e. executed as a node module), set some defaults
+    if (!options.cli) {
+        options = _.defaults({}, options, {
+            // if they want to modify the package file, we must disable jsonUpgraded
+            // otherwise the write operation will not happen
+            jsonUpgraded: !options.upgrade,
+            // should not suggest upgrades to versions within the specified version range if upgradeAll is explicitly set to false
+. Will become the default in the next major version.
+            upgradeAll: options.upgradeAll === undefined ? true : options.upgradeAll,
+            loglevel: 'silent',
+            args: []
+        });
+    }
+
+    // get filter from arguments
+    options.filter = options.args.join(' ') || options.filter;
+
+    print(options, 'Initializing...', 'verbose');
+
+    return vm.initialize({
+        global: options.global,
+        packageManager: options.packageManager,
+        registry: options.registry
+    })
+    .then(function () {
+
+        options = initOptions(options);
+
+        return options.global ?
+            analyzeGlobalPackages(options) :
+            findPackage(options).spread(_.partial(analyzeProjectDependencies, options));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Integration
+--------------
+The tool allows integration with 3rd party code:
+
+```js
+const ncu = require('npm-check-updates');
+
+ncu.<span class="apidocCodeKeywordSpan">run</span>({
+    // Always specify the path to the package file
+    packageFile: 'package.json',
+    // Any command-line option can be specified here.
+    // These are set by default:
+    silent: true,
+    jsonUpgraded: true
+}).then((upgraded) =&gt; {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.upgradeDependencies" id="apidoc.element.npm-check-updates.upgradeDependencies">
+        function <span class="apidocSignatureSpan">npm-check-updates.</span>upgradeDependencies
+        <span class="apidocSignatureSpan">(currentDependencies, latestVersions, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function upgradeDependencies(currentDependencies, latestVersions, options) {
+
+    options = options || {};
+
+    // filter out dependencies with empty values
+    currentDependencies = cint.filterObject(currentDependencies, function (key, value) {
+        return value;
+    });
+
+    // get the preferred wildcard and bind it to upgradeDependencyDeclaration
+    var wildcard = getPreferredWildcard(currentDependencies) || DEFAULT_WILDCARD;
+    var upgradeDep = _.partialRight(upgradeDependencyDeclaration, {
+        wildcard: wildcard,
+        removeRange: options.removeRange
+    });
+
+    return _(currentDependencies)
+        // only include packages for which a latest version was fetched
+        .pickBy(function (current, packageName) {
+            return packageName in latestVersions;
+        })
+        // combine the current and latest dependency objects into a single object keyed by packageName and containing
+        // both versions in an array: [current, latest]
+        .mapValues(function (current, packageName) {
+            var latest = latestVersions[packageName];
+            return [current, latest];
+        })
+        // pick the packages that are upgradeable
+        // we can use spread because isUpgradeable and upgradeDependencyDeclaration both take current and latest as
+        // arguments
+        .pickBy(_.spread(isUpgradeable))
+        .mapValues(_.spread(upgradeDep))
+        .value();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.upgradeDependencyDeclaration" id="apidoc.element.npm-check-updates.upgradeDependencyDeclaration">
+        function <span class="apidocSignatureSpan">npm-check-updates.</span>upgradeDependencyDeclaration
+        <span class="apidocSignatureSpan">(declaration, latestVersion, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function upgradeDependencyDeclaration(declaration, latestVersion, options) {
+
+    options = options || {};
+    options.wildcard = options.wildcard || DEFAULT_WILDCARD;
+
+    // parse the latestVersion
+    // return original declaration if latestSemver is invalid
+    var latestSemver = semverutils.parseRange(latestVersion)[0];
+    if (!latestSemver) {
+        return declaration;
+    }
+
+    // return global versionUtil.wildcards immediately
+    if (options.removeRange) {
+        return latestVersion;
+    } else if (versionUtil.isWildCard(declaration)) {
+        return declaration;
+    }
+
+    // parse the declaration
+    // if multiple ranges, use the semver with the least number of parts
+    var parsedRange = _(semverutils.parseRange(declaration))
+        // semver-utils includes empty entries for the || and - operators. We can remove them completely
+        .reject({operator: '||'})
+        .reject({operator: '-'})
+        .sortBy(_.ary(_.flow(versionUtil.stringify, versionUtil.numParts), 1))
+        .value();
+    var declaredSemver = parsedRange[0];
+
+<span class="apidocCodeCommentSpan">    /**
+     * Chooses version parts between the declared version and the latest.
+     * Base parts (major, minor, patch) are only included if they are in the original declaration.
+     * Added parts (release, build) are always included. They are only present if we are checking --greatest versions
+     * anyway.
+    */
+</span>    function chooseVersion(part) {
+        return versionUtil.isWildPart(declaredSemver[part]) ? declaredSemver[part] :
+            _.includes(versionUtil.VERSION_BASE_PARTS, part) &amp;&amp; declaredSemver[part] ? latestSemver[part] :
+            _.includes(versionUtil.VERSION_ADDED_PARTS, part) ? latestSemver[part] :
+            undefined;
+    }
+
+    // create a new semver object with major, minor, patch, build, and release parts
+    var newSemver = cint.toObject(versionUtil.VERSION_PARTS, function (part) {
+        return cint.keyValue(part, chooseVersion(part));
+    });
+    var newSemverString = versionUtil.stringify(newSemver);
+    var version = v(declaredSemver.semver) + newSemverString;
+
+    // determine the operator
+    // do not compact, because [undefined, '&lt;'] must be differentiated from ['&lt;']
+    var uniqueOperators = _(parsedRange)
+        .map(function (range) {
+            return range.operator;
+        })
+        .uniq()
+        .value();
+    var operator = uniqueOperators[0] || '';
+
+    var hasWildCard = versionUtil.WILDCARDS.some(_.partial(_.includes, newSemverString, _, 0));
+    var isLessThan = uniqueOperators[0] === '&lt;' || uniqueOperators[0] === '&lt;=';
+    var isMixed = uniqueOperators.length &gt; 1;
+
+    // convert versions with &lt;/&lt;= or mixed operators into the preferred wildcard
+    // only do so if the new version does not already contain a wildcard
+    return !hasWildCard &amp;&amp; (isLessThan || isMixed) ?
+        versionUtil.addWildCard(version, options.wildcard) :
+        operator + version;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.upgradePackageData" id="apidoc.element.npm-check-updates.upgradePackageData">
+        function <span class="apidocSignatureSpan">npm-check-updates.</span>upgradePackageData
+        <span class="apidocSignatureSpan">(pkgData, oldDependencies, newDependencies, newVersions, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function upgradePackageData(pkgData, oldDependencies, newDependencies, newVersions, options) {
+
+    options = options || {};
+
+    for (var dependency in newDependencies) {
+        if (options.upgradeAll || !isSatisfied(newVersions[dependency], oldDependencies[dependency])) {
+            var expression = '"' + dependency + '"\\s*:\\s*"' + escapeRegexp(oldDependencies[dependency] + '"');
+            var regExp = new RegExp(expression, 'g');
+            pkgData = pkgData.replace(regExp, '"' + dependency + '": ' + '"' + newDependencies[dependency] + '"');
+        }
+    }
+
+    return pkgData;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.upgradePackageDefinitions" id="apidoc.element.npm-check-updates.upgradePackageDefinitions">
+        function <span class="apidocSignatureSpan">npm-check-updates.</span>upgradePackageDefinitions
+        <span class="apidocSignatureSpan">(currentDependencies, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function upgradePackageDefinitions(currentDependencies, options) {
+    var versionTarget = getVersionTarget(options);
+
+    return queryVersions(currentDependencies, {
+        versionTarget: versionTarget,
+        registry: options.registry ? options.registry : null
+    }).then(function (latestVersions) {
+
+        var upgradedDependencies = upgradeDependencies(currentDependencies, latestVersions, {
+            removeRange: options.removeRange
+        });
+
+        var filteredUpgradedDependencies = _.pickBy(upgradedDependencies, function (v, dep) {
+            return !options.jsonUpgraded || options.upgradeAll || !isSatisfied(latestVersions[dep], currentDependencies[dep]);
+        });
+
+        return [filteredUpgradedDependencies, latestVersions];
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-check-updates.version_util" id="apidoc.module.npm-check-updates.version_util">module npm-check-updates.version_util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.version_util.addWildCard" id="apidoc.element.npm-check-updates.version_util.addWildCard">
+        function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>addWildCard
+        <span class="apidocSignatureSpan">(version, wildcard)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addWildCard(version, wildcard) {
+    return wildcard === '^' || wildcard === '~' ?
+        wildcard + version :
+        setPrecision(version, 'major') + wildcard;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   var hasWildCard = versionUtil.WILDCARDS.some(_.partial(_.includes, newSemverString, _, 0));
+   var isLessThan = uniqueOperators[0] === '&lt;' || uniqueOperators[0] === '&lt;=';
+   var isMixed = uniqueOperators.length &gt; 1;
+
+   // convert versions with &lt;/&lt;= or mixed operators into the preferred wildcard
+   // only do so if the new version does not already contain a wildcard
+   return !hasWildCard &amp;&amp; (isLessThan || isMixed) ?
+       versionUtil.<span class="apidocCodeKeywordSpan">addWildCard</span>(version, options.wildcard) :
+       operator + version;
+}
+
+/**
+* Upgrade a dependencies collection based on latest available versions
+* @param currentDependencies current dependencies collection object
+* @param latestVersions latest available versions collection object
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.version_util.colorizeDiff" id="apidoc.element.npm-check-updates.version_util.colorizeDiff">
+        function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>colorizeDiff
+        <span class="apidocSignatureSpan">(strToColor, strToCompare, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function colorizeDiff(strToColor, strToCompare, options) {
+
+    options = options || {};
+    options.color = options.color || 'green';
+    var leadingWildcard = '';
+
+    // separate out leading ^ or ~
+    if (/^[~^]/.test(strToColor) &amp;&amp; strToColor[0] === strToCompare[0]) {
+        leadingWildcard = strToColor[0];
+        strToColor = strToColor.slice(1);
+        strToCompare = strToCompare.slice(1);
+    }
+
+    // split into parts
+    var partsToColor = strToColor.split('.');
+    var partsToCompare = strToCompare.split('.');
+
+    var i = _.findIndex(partsToColor, function (part, i) {
+        return part !== partsToCompare[i];
+    });
+    i = i &gt;= 0 ? i : partsToColor.length;
+
+    // if we are colorizing only part of the word, add a dot in the middle
+    var middot = i &gt; 0 &amp;&amp; i &lt; partsToColor.length ? '.' : '';
+
+    return leadingWildcard +
+        partsToColor.slice(0,i).join('.') +
+        middot +
+        chalk[options.color](partsToColor.slice(i).join('.'));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.version_util.findGreatestByLevel" id="apidoc.element.npm-check-updates.version_util.findGreatestByLevel">
+        function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>findGreatestByLevel
+        <span class="apidocSignatureSpan">(versions, current, level)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findGreatestByLevel(versions, current, level) {
+    if (!SEMANTIC_DIRECT.test(current)) {
+        return null;
+    }
+
+    var cur = semverutils.parse(current);
+    return _.chain(versions)
+        .map(function (v) {
+            return {
+                string: v,
+                parsed: semverutils.parse(v)
+            };
+        })
+        .filter(function (o) {
+            if (level === 'minor' &amp;&amp; o.parsed.major !== cur.major) {
+                return false;
+            }
+            return o.parsed[level] === cur[level];
+        })
+        .map(function (o) {
+            return o.string;
+        })
+        .last()
+        .value();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.version_util.getPrecision" id="apidoc.element.npm-check-updates.version_util.getPrecision">
+        function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>getPrecision
+        <span class="apidocSignatureSpan">(version)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPrecision(version) {
+    var semver = semverutils.parseRange(version)[0];
+    // expects VERSION_PARTS to be in correct order
+    return _.find(VERSION_PARTS.slice().reverse(), _.propertyOf(semver));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.version_util.isWildCard" id="apidoc.element.npm-check-updates.version_util.isWildCard">
+        function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>isWildCard
+        <span class="apidocSignatureSpan">(version)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isWildCard(version) {
+    return WILDCARD_PURE_REGEX.test(version);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!latestSemver) {
+    return declaration;
+}
+
+// return global versionUtil.wildcards immediately
+if (options.removeRange) {
+    return latestVersion;
+} else if (versionUtil.<span class="apidocCodeKeywordSpan">isWildCard</span>(declaration)) {
+    return declaration;
+}
+
+// parse the declaration
+// if multiple ranges, use the semver with the least number of parts
+var parsedRange = _(semverutils.parseRange(declaration))
+    // semver-utils includes empty entries for the || and - operators. We can remove them completely
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.version_util.isWildPart" id="apidoc.element.npm-check-updates.version_util.isWildPart">
+        function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>isWildPart
+        <span class="apidocSignatureSpan">(versionPart)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isWildPart(versionPart) {
+    return versionPart === '*' || versionPart === 'x';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Chooses version parts between the declared version and the latest.
+ * Base parts (major, minor, patch) are only included if they are in the original declaration.
+ * Added parts (release, build) are always included. They are only present if we are checking --greatest versions
+ * anyway.
+*/
+function chooseVersion(part) {
+    return versionUtil.<span class="apidocCodeKeywordSpan">isWildPart</span>(declaredSemver[part]) ? declaredSemver[part] :
+        _.includes(versionUtil.VERSION_BASE_PARTS, part) &amp;&amp; declaredSemver[part] ? latestSemver[part] :
+        _.includes(versionUtil.VERSION_ADDED_PARTS, part) ? latestSemver[part] :
+        undefined;
+}
+
+// create a new semver object with major, minor, patch, build, and release parts
+var newSemver = cint.toObject(versionUtil.VERSION_PARTS, function (part) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.version_util.numParts" id="apidoc.element.npm-check-updates.version_util.numParts">
+        function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>numParts
+        <span class="apidocSignatureSpan">(version)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function numParts(version) {
+
+    var semver = semverutils.parseRange(version)[0];
+
+    if (!semver) {
+        throw new Error(util.format('semverutils.parseRange returned null when trying to parse "%s". This is probably a problem
+with the "semver-utils" dependency. Please report an issue at https://github.com/tjunnone/npm-check-updates/issues.', version));
+    }
+
+    return _.intersection(VERSION_PARTS, Object.keys(semver)).length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.version_util.precisionAdd" id="apidoc.element.npm-check-updates.version_util.precisionAdd">
+        function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>precisionAdd
+        <span class="apidocSignatureSpan">(precision, n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function precisionAdd(precision, n) {
+
+    if (n === 0) {
+        return precision;
+    }
+
+    var index = n === 0 ? precision :
+        _.includes(VERSION_BASE_PARTS, precision) ? VERSION_BASE_PARTS.indexOf(precision) + n :
+        _.includes(VERSION_ADDED_PARTS, precision) ? VERSION_BASE_PARTS.length + n :
+        null;
+
+    if (index === null) {
+        throw new Error('Invalid precision: ' + precision);
+    } else if (!VERSION_PARTS[index]) {
+        throw new Error('Invalid precision math' + arguments);
+    }
+
+    return VERSION_PARTS[index];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.version_util.setPrecision" id="apidoc.element.npm-check-updates.version_util.setPrecision">
+        function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>setPrecision
+        <span class="apidocSignatureSpan">(version, precision)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setPrecision(version, precision) {
+    var semver = semverutils.parseRange(version)[0];
+    return stringify(semver, precision);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.version_util.stringify" id="apidoc.element.npm-check-updates.version_util.stringify">
+        function <span class="apidocSignatureSpan">npm-check-updates.version_util.</span>stringify
+        <span class="apidocSignatureSpan">(semver, precision)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stringify(semver, precision) {
+
+    // get a list of the parts up until (and including) the given precision
+    // or all of them, if no precision is specified
+    var parts = precision ? VERSION_PARTS.slice(0, VERSION_PARTS.indexOf(precision)+1) : VERSION_PARTS;
+
+    // pair each part with its delimiter and join together
+    return parts
+        .filter(function (part) {
+            return _.includes(VERSION_BASE_PARTS, precision) || semver[part];
+        })
+        .map(function (part) {
+            return VERSION_PART_DELIM[part] + (semver[part] || '0');
+        })
+        .join('');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        undefined;
+}
+
+// create a new semver object with major, minor, patch, build, and release parts
+var newSemver = cint.toObject(versionUtil.VERSION_PARTS, function (part) {
+    return cint.keyValue(part, chooseVersion(part));
+});
+var newSemverString = versionUtil.<span class="apidocCodeKeywordSpan">stringify</span>(newSemver);
+var version = v(declaredSemver.semver) + newSemverString;
+
+// determine the operator
+// do not compact, because [undefined, '&lt;'] must be differentiated from ['&lt;']
+var uniqueOperators = _(parsedRange)
+    .map(function (range) {
+        return range.operator;
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.npm-check-updates.versionmanager" id="apidoc.module.npm-check-updates.versionmanager">module npm-check-updates.versionmanager</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.versionmanager.getCurrentDependencies" id="apidoc.element.npm-check-updates.versionmanager.getCurrentDependencies">
+        function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>getCurrentDependencies
+        <span class="apidocSignatureSpan">(pkgData, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCurrentDependencies(pkgData, options) {
+
+    pkgData = pkgData || {};
+    options = options || {};
+
+    if (!options.prod &amp;&amp; !options.dev &amp;&amp; !options.optional) {
+        options.prod = options.dev = options.optional = true;
+    }
+
+    var allDependencies = cint.filterObject(_.merge({},
+        options.prod &amp;&amp; pkgData.dependencies,
+        options.dev &amp;&amp; pkgData.devDependencies,
+        options.optional &amp;&amp; pkgData.optionalDependencies
+    ), filterAndReject(options.filter, options.reject));
+
+    return allDependencies;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.versionmanager.getGreatestPackageVersion" id="apidoc.element.npm-check-updates.versionmanager.getGreatestPackageVersion">
+        function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>getGreatestPackageVersion
+        <span class="apidocSignatureSpan">(pkgData)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getGreatestPackageVersion = function (pkgData) {
+    return selectedPackageManager.greatest(pkgData);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.versionmanager.getInstalledPackages" id="apidoc.element.npm-check-updates.versionmanager.getInstalledPackages">
+        function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>getInstalledPackages
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getInstalledPackages(options) {
+
+    options = options || {};
+
+    return selectedPackageManager.list([], {cwd: options.cwd}).then(function (results) {
+        if (!results || !results.dependencies) {
+            throw new Error('Unable to retrieve NPM package list');
+        }
+
+        // filter out undefined packages or those with a wildcard
+        var filterFunction = filterAndReject(options.filter, options.reject);
+        var validPackages = cint.filterObject(results.dependencies, function (dep, pkgInfo) {
+            return pkgInfo &amp;&amp; pkgInfo.name &amp;&amp; pkgInfo.version &amp;&amp; !versionUtil.isWildPart(pkgInfo.version) &amp;&amp; filterFunction(dep);
+        });
+
+        // convert the dependency object from npm into a simple object that maps the package name to its version
+        var simpleDependencies = cint.mapObject(validPackages, function (dep, pkgInfo) {
+            return cint.keyValue(dep, pkgInfo.version);
+        });
+
+        return simpleDependencies;
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.versionmanager.getLatestPackageVersion" id="apidoc.element.npm-check-updates.versionmanager.getLatestPackageVersion">
+        function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>getLatestPackageVersion
+        <span class="apidocSignatureSpan">(pkgData)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLatestPackageVersion = function (pkgData) {
+    return selectedPackageManager.latest(pkgData);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.versionmanager.getPreferredWildcard" id="apidoc.element.npm-check-updates.versionmanager.getPreferredWildcard">
+        function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>getPreferredWildcard
+        <span class="apidocSignatureSpan">(dependencies)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPreferredWildcard(dependencies) {
+
+    // if there are no dependencies, return null.
+    if (Object.keys(dependencies).length === 0) {
+        return null;
+    }
+
+    // group the dependencies by wildcard
+    var groups = _.groupBy(_.values(dependencies), function (dep) {
+        return _.find(versionUtil.WILDCARDS, function (wildcard) {
+            return dep &amp;&amp; dep.indexOf(wildcard) &gt; -1;
+        });
+    });
+
+    // if none of the dependencies use a wildcard, return null
+    var usedWildcards = Object.keys(groups);
+    if (usedWildcards.length === 1 &amp;&amp; usedWildcards[0] === 'undefined') {
+        return null;
+    }
+
+    // convert to an array of objects that can be sorted
+    var arrOfGroups = cint.toArray(groups, function (wildcard, instances) {
+        return {
+            wildcard: wildcard,
+            instances: instances
+        };
+    });
+
+    // reverse sort the groups so that the wildcard with the most appearances is at the head, then return it.
+    var sorted = _.sortBy(arrOfGroups, function (wildcardObject) {
+        return -wildcardObject.instances.length;
+    });
+
+    return sorted[0].wildcard;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.versionmanager.getVersionTarget" id="apidoc.element.npm-check-updates.versionmanager.getVersionTarget">
+        function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>getVersionTarget
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getVersionTarget(options) {
+    return options.semverLevel ? options.semverLevel :
+        options.newest ? 'newest' :
+        options.greatest ? 'greatest' :
+        'latest';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.versionmanager.initialize" id="apidoc.element.npm-check-updates.versionmanager.initialize">
+        function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>initialize
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initialize(args) {
+
+    args = args || {};
+    args.packageManager = args.packageManager || 'npm';
+
+    if (!(args.packageManager in packageManagers)) {
+        throw new Error('Invalid package manager: ' + args.packageManager);
+    }
+
+    selectedPackageManager = packageManagers[args.packageManager];
+
+    return selectedPackageManager.init({
+        global: args.global,
+        registry: args.registry
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.versionmanager.isSatisfied" id="apidoc.element.npm-check-updates.versionmanager.isSatisfied">
+        function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>isSatisfied
+        <span class="apidocSignatureSpan">(version, range, loose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function satisfies(version, range, loose) {
+  try {
+    range = new Range(range, loose);
+  } catch (er) {
+    return false;
+  }
+  return range.test(version);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.versionmanager.isUpgradeable" id="apidoc.element.npm-check-updates.versionmanager.isUpgradeable">
+        function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>isUpgradeable
+        <span class="apidocSignatureSpan">(current, latest)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isUpgradeable(current, latest) {
+
+    // do not upgrade non-npm version declarations (such as git tags)
+    // do not upgrade versionUtil.wildcards
+    if (!semver.validRange(current) || versionUtil.isWildCard(current)) {
+        return false;
+    }
+
+    // remove the constraint (e.g. ^1.0.1 -&gt; 1.0.1) to allow upgrades that satisfy the range, but are out of date
+    var range = semverutils.parseRange(current)[0];
+    if (!range) {
+        throw new Error('"' + current + '" could not be parsed by semver-utils. This is probably a bug. Please file an issue at
+https://github.com/tjunnone/npm-check-updates.');
+    }
+    var version = versionUtil.stringify(range);
+
+    // make sure it is a valid range
+    // not upgradeable if the latest version satisfies the current range
+    // not upgradeable if the specified version is newer than the latest (indicating a prerelease version)
+    return Boolean(semver.validRange(version)) &amp;&amp;
+        !isSatisfied(latest, version) &amp;&amp;
+        !semver.ltr(latest, version);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.versionmanager.queryVersions" id="apidoc.element.npm-check-updates.versionmanager.queryVersions">
+        function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>queryVersions
+        <span class="apidocSignatureSpan">(packageMap, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function queryVersions(packageMap, options) {
+
+    var getPackageVersion;
+    options = options || {};
+
+    var packageList = Object.keys(packageMap);
+
+    // validate options.versionTarget
+    options.versionTarget = options.versionTarget || 'latest';
+
+    // determine the getPackageVersion function from options.versionTarget
+    switch (options.versionTarget) {
+        case 'latest':
+            getPackageVersion = selectedPackageManager.latest;
+            break;
+        case 'greatest':
+            getPackageVersion = selectedPackageManager.greatest;
+            break;
+        case 'newest':
+            getPackageVersion = selectedPackageManager.newest;
+            break;
+        case 'major':
+            getPackageVersion = selectedPackageManager.greatestMajor;
+            break;
+        case 'minor':
+            getPackageVersion = selectedPackageManager.greatestMinor;
+            break;
+        default:
+            var supportedVersionTargets = ['latest', 'newest', 'greatest', 'major', 'minor'];
+            return Promise.reject(new Error('Unsupported versionTarget: ' + options.versionTarget +
+                '. Supported version targets are: ' + supportedVersionTargets.join(', ')));
+    }
+
+    // ignore 404 errors from getPackageVersion by having them return null instead of rejecting
+    function getPackageVersionProtected(dep) {
+        return getPackageVersion(dep, packageMap[dep]).catch(function (err) {
+            if (err.message == 404) { // eslint-disable-line eqeqeq
+                return null;
+            } else {
+                throw err;
+            }
+        });
+    }
+
+    // zip up the array of versions into to a nicer object keyed by package name
+    function zipVersions(versionList) {
+        return cint.toObject(versionList, function (version, i) {
+            return cint.keyValue(packageList[i], version);
+        });
+    }
+
+    return Promise.map(packageList, getPackageVersionProtected)
+        .then(zipVersions)
+        .then(_.partialRight(_.pickBy, _.identity));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.versionmanager.upgradeDependencies" id="apidoc.element.npm-check-updates.versionmanager.upgradeDependencies">
+        function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>upgradeDependencies
+        <span class="apidocSignatureSpan">(currentDependencies, latestVersions, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function upgradeDependencies(currentDependencies, latestVersions, options) {
+
+    options = options || {};
+
+    // filter out dependencies with empty values
+    currentDependencies = cint.filterObject(currentDependencies, function (key, value) {
+        return value;
+    });
+
+    // get the preferred wildcard and bind it to upgradeDependencyDeclaration
+    var wildcard = getPreferredWildcard(currentDependencies) || DEFAULT_WILDCARD;
+    var upgradeDep = _.partialRight(upgradeDependencyDeclaration, {
+        wildcard: wildcard,
+        removeRange: options.removeRange
+    });
+
+    return _(currentDependencies)
+        // only include packages for which a latest version was fetched
+        .pickBy(function (current, packageName) {
+            return packageName in latestVersions;
+        })
+        // combine the current and latest dependency objects into a single object keyed by packageName and containing
+        // both versions in an array: [current, latest]
+        .mapValues(function (current, packageName) {
+            var latest = latestVersions[packageName];
+            return [current, latest];
+        })
+        // pick the packages that are upgradeable
+        // we can use spread because isUpgradeable and upgradeDependencyDeclaration both take current and latest as
+        // arguments
+        .pickBy(_.spread(isUpgradeable))
+        .mapValues(_.spread(upgradeDep))
+        .value();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.versionmanager.upgradeDependencyDeclaration" id="apidoc.element.npm-check-updates.versionmanager.upgradeDependencyDeclaration">
+        function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>upgradeDependencyDeclaration
+        <span class="apidocSignatureSpan">(declaration, latestVersion, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function upgradeDependencyDeclaration(declaration, latestVersion, options) {
+
+    options = options || {};
+    options.wildcard = options.wildcard || DEFAULT_WILDCARD;
+
+    // parse the latestVersion
+    // return original declaration if latestSemver is invalid
+    var latestSemver = semverutils.parseRange(latestVersion)[0];
+    if (!latestSemver) {
+        return declaration;
+    }
+
+    // return global versionUtil.wildcards immediately
+    if (options.removeRange) {
+        return latestVersion;
+    } else if (versionUtil.isWildCard(declaration)) {
+        return declaration;
+    }
+
+    // parse the declaration
+    // if multiple ranges, use the semver with the least number of parts
+    var parsedRange = _(semverutils.parseRange(declaration))
+        // semver-utils includes empty entries for the || and - operators. We can remove them completely
+        .reject({operator: '||'})
+        .reject({operator: '-'})
+        .sortBy(_.ary(_.flow(versionUtil.stringify, versionUtil.numParts), 1))
+        .value();
+    var declaredSemver = parsedRange[0];
+
+<span class="apidocCodeCommentSpan">    /**
+     * Chooses version parts between the declared version and the latest.
+     * Base parts (major, minor, patch) are only included if they are in the original declaration.
+     * Added parts (release, build) are always included. They are only present if we are checking --greatest versions
+     * anyway.
+    */
+</span>    function chooseVersion(part) {
+        return versionUtil.isWildPart(declaredSemver[part]) ? declaredSemver[part] :
+            _.includes(versionUtil.VERSION_BASE_PARTS, part) &amp;&amp; declaredSemver[part] ? latestSemver[part] :
+            _.includes(versionUtil.VERSION_ADDED_PARTS, part) ? latestSemver[part] :
+            undefined;
+    }
+
+    // create a new semver object with major, minor, patch, build, and release parts
+    var newSemver = cint.toObject(versionUtil.VERSION_PARTS, function (part) {
+        return cint.keyValue(part, chooseVersion(part));
+    });
+    var newSemverString = versionUtil.stringify(newSemver);
+    var version = v(declaredSemver.semver) + newSemverString;
+
+    // determine the operator
+    // do not compact, because [undefined, '&lt;'] must be differentiated from ['&lt;']
+    var uniqueOperators = _(parsedRange)
+        .map(function (range) {
+            return range.operator;
+        })
+        .uniq()
+        .value();
+    var operator = uniqueOperators[0] || '';
+
+    var hasWildCard = versionUtil.WILDCARDS.some(_.partial(_.includes, newSemverString, _, 0));
+    var isLessThan = uniqueOperators[0] === '&lt;' || uniqueOperators[0] === '&lt;=';
+    var isMixed = uniqueOperators.length &gt; 1;
+
+    // convert versions with &lt;/&lt;= or mixed operators into the preferred wildcard
+    // only do so if the new version does not already contain a wildcard
+    return !hasWildCard &amp;&amp; (isLessThan || isMixed) ?
+        versionUtil.addWildCard(version, options.wildcard) :
+        operator + version;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.versionmanager.upgradePackageData" id="apidoc.element.npm-check-updates.versionmanager.upgradePackageData">
+        function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>upgradePackageData
+        <span class="apidocSignatureSpan">(pkgData, oldDependencies, newDependencies, newVersions, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function upgradePackageData(pkgData, oldDependencies, newDependencies, newVersions, options) {
+
+    options = options || {};
+
+    for (var dependency in newDependencies) {
+        if (options.upgradeAll || !isSatisfied(newVersions[dependency], oldDependencies[dependency])) {
+            var expression = '"' + dependency + '"\\s*:\\s*"' + escapeRegexp(oldDependencies[dependency] + '"');
+            var regExp = new RegExp(expression, 'g');
+            pkgData = pkgData.replace(regExp, '"' + dependency + '": ' + '"' + newDependencies[dependency] + '"');
+        }
+    }
+
+    return pkgData;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.npm-check-updates.versionmanager.upgradePackageDefinitions" id="apidoc.element.npm-check-updates.versionmanager.upgradePackageDefinitions">
+        function <span class="apidocSignatureSpan">npm-check-updates.versionmanager.</span>upgradePackageDefinitions
+        <span class="apidocSignatureSpan">(currentDependencies, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function upgradePackageDefinitions(currentDependencies, options) {
+    var versionTarget = getVersionTarget(options);
+
+    return queryVersions(currentDependencies, {
+        versionTarget: versionTarget,
+        registry: options.registry ? options.registry : null
+    }).then(function (latestVersions) {
+
+        var upgradedDependencies = upgradeDependencies(currentDependencies, latestVersions, {
+            removeRange: options.removeRange
+        });
+
+        var filteredUpgradedDependencies = _.pickBy(upgradedDependencies, function (v, dep) {
+            return !options.jsonUpgraded || options.upgradeAll || !isSatisfied(latestVersions[dep], currentDependencies[dep]);
+        });
+
+        return [filteredUpgradedDependencies, latestVersions];
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
