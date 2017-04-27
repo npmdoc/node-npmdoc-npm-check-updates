@@ -1,6 +1,6 @@
 # npmdoc-npm-check-updates
 
-#### api documentation for  [npm-check-updates (v2.11.0)](https://github.com/tjunnone/npm-check-updates)  [![npm package](https://img.shields.io/npm/v/npmdoc-npm-check-updates.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-npm-check-updates) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-npm-check-updates.svg)](https://travis-ci.org/npmdoc/node-npmdoc-npm-check-updates)
+#### basic api documentation for  [npm-check-updates (v2.11.0)](https://github.com/tjunnone/npm-check-updates)  [![npm package](https://img.shields.io/npm/v/npmdoc-npm-check-updates.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-npm-check-updates) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-npm-check-updates.svg)](https://travis-ci.org/npmdoc/node-npmdoc-npm-check-updates)
 
 #### Find newer versions of dependencies than what your package.json or bower.json allows
 
