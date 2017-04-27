@@ -310,11 +310,11 @@
 <tspan x="10" y="4922">  │ │ ├── os-tmpdir@1.0.2 </tspan>
 <tspan x="10" y="4938">  │ │ ├── osenv@0.1.4 </tspan>
 <tspan x="10" y="4954">  │ │ ├── uuid@2.0.3 </tspan>
-<tspan x="10" y="4970">  │ │ └─┬ write-file-atomic@1.3.1 </tspan>
+<tspan x="10" y="4970">  │ │ └─┬ write-file-atomic@1.3.4 </tspan>
 <tspan x="10" y="4986">  │ │   ├── imurmurhash@0.1.4 </tspan>
 <tspan x="10" y="5002">  │ │   └── slide@1.1.6 </tspan>
-<tspan x="10" y="5018">  │ ├─┬ debug@2.6.3 </tspan>
-<tspan x="10" y="5034">  │ │ └── ms@0.7.2 </tspan>
+<tspan x="10" y="5018">  │ ├─┬ debug@2.6.5 </tspan>
+<tspan x="10" y="5034">  │ │ └── ms@0.7.3 </tspan>
 <tspan x="10" y="5050">  │ ├── es6-promise@3.3.1 </tspan>
 <tspan x="10" y="5066">  │ ├─┬ hasbin@1.2.3 </tspan>
 <tspan x="10" y="5082">  │ │ └── async@1.5.2 </tspan>
@@ -374,7 +374,7 @@
 <tspan x="10" y="5946">  │ │ │   ├─┬ dashdash@1.14.1 </tspan>
 <tspan x="10" y="5962">  │ │ │   │ └── assert-plus@1.0.0 </tspan>
 <tspan x="10" y="5978">  │ │ │   ├── ecc-jsbn@0.1.1 </tspan>
-<tspan x="10" y="5994">  │ │ │   ├─┬ getpass@0.1.6 </tspan>
+<tspan x="10" y="5994">  │ │ │   ├─┬ getpass@0.1.7 </tspan>
 <tspan x="10" y="6010">  │ │ │   │ └── assert-plus@1.0.0 </tspan>
 <tspan x="10" y="6026">  │ │ │   ├── jodid25519@1.0.2 </tspan>
 <tspan x="10" y="6042">  │ │ │   ├── jsbn@0.1.1 </tspan>
@@ -401,7 +401,7 @@
 <tspan x="10" y="6378">  │ │ │   ├─┬ cliui@2.1.0 </tspan>
 <tspan x="10" y="6394">  │ │ │   │ ├─┬ center-align@0.1.3 </tspan>
 <tspan x="10" y="6410">  │ │ │   │ │ ├─┬ align-text@0.1.4 </tspan>
-<tspan x="10" y="6426">  │ │ │   │ │ │ ├─┬ kind-of@3.1.0 </tspan>
+<tspan x="10" y="6426">  │ │ │   │ │ │ ├─┬ kind-of@3.2.0 </tspan>
 <tspan x="10" y="6442">  │ │ │   │ │ │ │ └── is-buffer@1.1.5 </tspan>
 <tspan x="10" y="6458">  │ │ │   │ │ │ ├── longest@1.0.1 </tspan>
 <tspan x="10" y="6474">  │ │ │   │ │ │ └── repeat-string@1.6.1 </tspan>
@@ -449,7 +449,7 @@
 <tspan x="10" y="7146">  │ │ │   │   │ ├── pify@2.3.0 </tspan>
 <tspan x="10" y="7162">  │ │ │   │   │ └─┬ strip-bom@2.0.0 </tspan>
 <tspan x="10" y="7178">  │ │ │   │   │   └── is-utf8@0.2.1 </tspan>
-<tspan x="10" y="7194">  │ │ │   │   ├─┬ normalize-package-data@2.3.6 </tspan>
+<tspan x="10" y="7194">  │ │ │   │   ├─┬ normalize-package-data@2.3.8 </tspan>
 <tspan x="10" y="7210">  │ │ │   │   │ ├─┬ is-builtin-module@1.0.0 </tspan>
 <tspan x="10" y="7226">  │ │ │   │   │ │ └── builtin-modules@1.1.1 </tspan>
 <tspan x="10" y="7242">  │ │ │   │   │ └─┬ validate-npm-package-license@3.0.1 </tspan>
@@ -539,7 +539,7 @@
 <tspan x="10" y="8586">    │   │ ├── timed-out@3.1.3 </tspan>
 <tspan x="10" y="8602">    │   │ ├── unzip-response@1.0.2 </tspan>
 <tspan x="10" y="8618">    │   │ └── url-parse-lax@1.0.0 </tspan>
-<tspan x="10" y="8634">    │   ├─┬ registry-auth-token@3.1.2 </tspan>
+<tspan x="10" y="8634">    │   ├─┬ registry-auth-token@3.3.0 </tspan>
 <tspan x="10" y="8650">    │   │ └─┬ rc@1.2.1 </tspan>
 <tspan x="10" y="8666">    │   │   ├── deep-extend@0.4.1 </tspan>
 <tspan x="10" y="8682">    │   │   ├── minimist@1.2.0 </tspan>
